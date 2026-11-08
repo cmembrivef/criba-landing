@@ -66,6 +66,11 @@
         ok.hidden = false;
         ok.focus();
       }
+      // Conversión para Google Analytics (solo se envía si la persona aceptó las cookies)
+      if (typeof window.cribaEvento === "function") {
+        var pack = form.querySelector("input[name='pack']:checked");
+        window.cribaEvento("generate_lead", { pack: pack ? pack.value : "sin-elegir" });
+      }
     }).catch(function () {
       if (err) err.hidden = false;
       setSending(false);
