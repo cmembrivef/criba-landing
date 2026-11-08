@@ -17,5 +17,9 @@ Los registros se ven en Netlify → Forms → `lista-espera` y se pueden exporta
 Revisad también la pestaña de spam: el filtro de Netlify a veces marca registros reales; se recuperan con «Mark as verified».
 Se borran el 31/12/2026, como dice el aviso de privacidad.
 
+## Google Analytics
+Propiedad GA4 `G-BY35E4YVML`. Solo se carga si se acepta el aviso de cookies (`public/assets/js/consentimiento.js`).
+Al apuntarse se envía el evento `generate_lead` con el pack elegido.
+
 ## Identidad
 Colores, tipografía y reglas del Manual de marca de Criba (Grupo 1, 2026). Imágenes de producto generadas con IA.

@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var GA_ID = "";            // ID de medición de Google Analytics (G-…). Vacío = sin Analytics ni aviso.
+  var GA_ID = "G-BY35E4YVML"; // ID de medición de Google Analytics (G-…). Vacío = sin Analytics ni aviso.
   var CLAVE = "criba_cookies"; // "si" | "no"
   var DIAS = 90;             // duración máxima de las cookies de Analytics
 
