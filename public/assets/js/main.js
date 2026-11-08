@@ -26,7 +26,7 @@
   } catch (e) { /* referrer ilegible */ }
   if (referente && !store.get("criba_referente")) store.set("criba_referente", referente);
 
-  var form = document.querySelector("form[name='lista-espera']");
+  var form = document.getElementById("form-lista");
   if (!form) return;
 
   KEYS.forEach(function (k) {
