@@ -14,6 +14,7 @@ Dominio: **cribacoffee.es** · Alojamiento: Netlify (se publica sola con cada ca
 ## Datos de cada registro
 `email`, `pack` (opcional), `consentimiento`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_content` y `referente` (web de la que llega la visita).
 Los registros se ven en Netlify → Forms → `lista-espera` y se pueden exportar a CSV.
+Revisad también la pestaña de spam: el filtro de Netlify a veces marca registros reales; se recuperan con «Mark as verified».
 Se borran el 31/12/2026, como dice el aviso de privacidad.
 
 ## Identidad
