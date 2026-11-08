@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ficha de cata · Criba</title>
+<style>
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+@font-face { font-family: "DM Mono"; src: url("../public/assets/fonts/dm-mono-400.woff2") format("woff2"); font-weight: 400; }
+@page { size: A4; margin: 0; }
+:root { --papel:#F5EFE4; --tinta:#1B1613; --gris:#6B6158; --cereza:#C7361E; --ambar:#E2972A; --pino:#1E5E46; --linea: rgba(27,22,19,.22); }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { width: 210mm; height: 297mm; background: var(--papel); color: var(--tinta); font-family: "Fraunces", serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.hoja { position: relative; height: 297mm; overflow: hidden; padding: 12mm 16mm 0; display: flex; flex-direction: column; }
+.mono { font-family: "DM Mono", monospace; font-size: 8pt; letter-spacing: .16em; text-transform: uppercase; }
+.top { display: flex; justify-content: space-between; padding-bottom: 3mm; border-bottom: 0.6pt solid var(--tinta); color: var(--gris); }
+.cab { display: grid; grid-template-columns: 1fr 28mm; gap: 6mm; align-items: center; margin-top: 7mm; }
+h1 { margin: 0; font-weight: 800; font-variation-settings: "opsz" 144; font-size: 40pt; line-height: .92; letter-spacing: -.035em; }
+h1 em { display: block; font-style: italic; font-weight: 500; color: var(--cereza); letter-spacing: -.02em; }
+.cab img { width: 28mm; height: 28mm; }
+.intro { margin: 5mm 0 0; font-size: 11pt; line-height: 1.45; max-width: 150mm; }
+table { width: 100%; border-collapse: collapse; margin-top: 6mm; }
+th { text-align: center; padding: 0 2mm 2.2mm; font-weight: 800; font-size: 12.5pt; letter-spacing: -.02em; vertical-align: bottom; }
+th .n { display: block; font-variation-settings: "opsz" 144; }
+th .raya { display: block; height: 1.6mm; margin-top: 2mm; }
+th .nombre { display: block; height: 7mm; margin: 1.5mm 2mm 0; border-bottom: 0.6pt solid var(--tinta); }
+th:nth-child(2) .raya { background: var(--cereza); }
+th:nth-child(3) .raya { background: var(--ambar); }
+th:nth-child(4) .raya { background: var(--pino); }
+th:first-child { width: 30mm; }
+td { padding: 2.5mm 0; border-top: 0.5pt solid var(--linea); text-align: center; }
+td:first-child { text-align: left; }
+.bolas { display: inline-flex; gap: 1.6mm; }
+.bolas i { width: 4.2mm; height: 4.2mm; border: 0.8pt solid var(--tinta); border-radius: 50%; display: block; }
+.escala { display: flex; justify-content: space-between; margin-top: 2mm; color: var(--gris); }
+.fav { margin-top: 7mm; display: grid; gap: 5mm; }
+.fav p { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4mm; align-items: end; font-weight: 800; font-size: 14pt; letter-spacing: -.02em; }
+.fav span { border-bottom: 0.8pt solid var(--tinta); height: 6mm; }
+.grupo { margin-top: 7mm; }
+.grupo th:first-child { width: 56mm; }
+.grupo table { margin-top: 3mm; }
+.grupo td { padding: 2mm 0; }
+.grupo td:first-child .linea { display: block; border-bottom: 0.6pt solid var(--tinta); height: 5mm; margin-right: 8mm; }
+.caja { display: inline-block; width: 4.4mm; height: 4.4mm; border: 0.8pt solid var(--tinta); }
+.guia { margin-top: 6mm; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4mm; border-top: 0.6pt solid var(--tinta); padding-top: 3mm; }
+.guia p { margin: 0; font-size: 8.6pt; line-height: 1.35; }
+.guia b { display: block; font-family: "DM Mono", monospace; font-weight: 400; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1mm; }
+.banda { margin: auto -16mm 0; background: var(--cereza); color: var(--papel); padding: 6mm 16mm; display: flex; justify-content: space-between; align-items: center; }
+.banda em { font-style: italic; font-weight: 500; font-size: 17pt; letter-spacing: -.02em; }
+</style>
+</head>
+<body>
+<div class="hoja">
+  <div class="top mono"><span>Criba · Ficha de cata</span><span>Para tres cafés</span></div>
+  <div class="cab">
+    <h1>Ficha de cata. <em>tu propio criterio.</em></h1>
+    <img src="../public/assets/logo/criba-simbolo-color.svg" alt="">
+  </div>
+  <p class="intro">Elige tres cafés distintos y escribe su nombre arriba. Pruébalos en orden, del más ligero al más intenso, y puntúa cada atributo de 1 a 5 sin mirar la ficha de los demás.</p>
+
+  <table>
+    <thead><tr>
+      <th></th>
+      <th><span class="n">01</span><span class="nombre"></span><span class="raya"></span></th>
+      <th><span class="n">02</span><span class="nombre"></span><span class="raya"></span></th>
+      <th><span class="n">03</span><span class="nombre"></span><span class="raya"></span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="mono">Aroma</td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+      <tr><td class="mono">Acidez</td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+      <tr><td class="mono">Dulzor</td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+      <tr><td class="mono">Cuerpo</td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+      <tr><td class="mono">Final</td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td><td><span class="bolas"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="fav">
+    <p>Mi favorito es <span></span></p>
+    <p>porque <span></span></p>
+  </div>
+
+  <div class="grupo">
+    <p class="mono">En grupo · ¿Con cuál se queda cada uno?</p>
+    <table>
+      <thead><tr><th></th><th><span class="n">01</span><span class="raya"></span></th><th><span class="n">02</span><span class="raya"></span></th><th><span class="n">03</span><span class="raya"></span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="linea"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td></tr>
+        <tr><td><span class="linea"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td></tr>
+        <tr><td><span class="linea"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td></tr>
+        <tr><td><span class="linea"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td><td><span class="caja"></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="guia">
+    <p><b>Aroma</b>Lo que hueles antes del primer sorbo.</p>
+    <p><b>Acidez</b>La viveza en la lengua, como la de una fruta.</p>
+    <p><b>Dulzor</b>Lo que recuerda al caramelo o a la fruta madura.</p>
+    <p><b>Cuerpo</b>Lo que pesa en la boca: ligero o denso.</p>
+    <p><b>Final</b>Lo que se queda al tragar.</p>
+  </div>
+
+  <div class="banda"><em>Comparte tu elección.</em><span class="mono">#micriterio · @cribacoffee · cribacoffee.es</span></div>
+</div>
+</body>
+</html>

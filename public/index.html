@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criba · Lista de espera del Pack de Cata</title>
+  <meta name="description" content="Tres cafés de especialidad, una ficha de cata y tu propio criterio. Apúntate a la lista de espera de Criba y sé de los primeros en catar.">
+  <meta name="theme-color" content="#F5D4C8">
+  <link rel="canonical" href="https://cribacoffee.es/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Criba">
+  <meta property="og:title" content="Sé de los primeros en catar · Criba">
+  <meta property="og:description" content="Tres cafés de especialidad, una ficha de cata y tu propio criterio. Apúntate a la lista de espera.">
+  <meta property="og:url" content="https://cribacoffee.es/">
+  <meta property="og:image" content="https://cribacoffee.es/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Criba. Sé de los primeros en catar. Lista de espera del Pack de Cata.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/fraunces-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=1">
+  <script src="/assets/js/main.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#lista">Ir al formulario</a>
+
+  <header class="cabecera">
+    <div class="wrap top">
+      <a class="top__logo" href="/"><img src="/assets/logo/criba-logotipo-horizontal.svg" alt="Criba" width="341" height="104"></a>
+      <p class="top__estado mono">Lista <span class="ancho">de espera </span>abierta</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap hero__grid">
+        <div class="hero__texto">
+          <p class="kicker mono">Pack de cata · 3 packs · 9 cafés</p>
+          <h1 class="display" id="titulo">Sé de los primeros <em>en catar.</em></h1>
+          <p class="lead">Tres cafés de especialidad, una ficha para puntuarlos y tu propio criterio. Apúntate a la lista de espera y te avisamos antes que a nadie.</p>
+
+          <div class="registro" id="lista">
+            <form class="form" name="lista-espera" method="POST" action="/gracias/" data-netlify="true" netlify-honeypot="empresa">
+              <input type="hidden" name="form-name" value="lista-espera">
+              <input type="hidden" name="utm_source" value="">
+              <input type="hidden" name="utm_medium" value="">
+              <input type="hidden" name="utm_campaign" value="">
+              <input type="hidden" name="utm_content" value="">
+              <input type="hidden" name="referente" value="">
+              <p class="hp" aria-hidden="true"><label>No rellenes este campo <input name="empresa" tabindex="-1" autocomplete="off"></label></p>
+
+              <div class="field">
+                <label class="mono" for="email">Tu correo</label>
+                <input class="input" id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="nombre@correo.com">
+              </div>
+
+              <fieldset class="field">
+                <legend class="mono">¿Qué pack catarías primero? <span class="opcional">(opcional)</span></legend>
+                <div class="chips">
+                  <label class="chip chip--momentos"><input type="radio" name="pack" value="momentos"><span>Momentos</span></label>
+                  <label class="chip chip--procesos"><input type="radio" name="pack" value="procesos"><span>Procesos</span></label>
+                  <label class="chip chip--origenes"><input type="radio" name="pack" value="origenes"><span>Orígenes</span></label>
+                  <label class="chip chip--nose"><input type="radio" name="pack" value="aun-no-lo-se"><span>Aún no lo sé</span></label>
+                </div>
+              </fieldset>
+
+              <label class="consent">
+                <input type="checkbox" name="consentimiento" value="si" required>
+                <span>Acepto que Criba guarde mi correo para avisarme. Tienes los detalles en la <a href="/privacidad/">política de privacidad</a>.</span>
+              </label>
+
+              <button class="btn" type="submit"><span class="btn__txt">Apuntarme</span> <span aria-hidden="true">→</span></button>
+              <p class="form__nota mono">Sin spam. Solo te escribimos si Criba sale a la venta.</p>
+              <p class="form__error" role="alert" hidden>No hemos podido apuntarte. Revisa la conexión y vuelve a intentarlo.</p>
+            </form>
+
+            <div class="ok" tabindex="-1" hidden>
+              <p class="mono">Lista de espera · Apuntado</p>
+              <h2 class="display">Ya estás <em>dentro.</em></h2>
+              <p>Serás de los primeros en saber de Criba. Mientras, haz la cata en casa con tres cafés que tengas a mano.</p>
+              <a class="btn" href="/descargas/ficha-de-cata-criba.pdf" download>Descargar la ficha <span aria-hidden="true">↓</span></a>
+              <p class="mono ok__nota">PDF · A4 · Para imprimir</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero__img">
+          <img src="/assets/img/tres-cajas-1400.webp" srcset="/assets/img/tres-cajas-800.webp 800w, /assets/img/tres-cajas-1400.webp 1400w" sizes="(min-width: 960px) 46vw, 100vw" width="1400" height="933" alt="Las tres cajas de cata de Criba apiladas: Momentos en cereza, Procesos en ámbar y Orígenes en pino." fetchpriority="high">
+          <figcaption class="mono">Nº 01 Momentos · Nº 02 Procesos · Nº 03 Orígenes. Imagen generada con IA.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="banda">
+      <div class="wrap banda__grid">
+        <p class="banda__num"><span class="mono">Incluye</span> <strong>3+1</strong></p>
+        <ul class="banda__items">
+          <li>3 cafés × 100 g en grano</li>
+          <li>1 ficha de cata para cuatro personas</li>
+          <li>Del 01 al 03, de más ligero a más intenso</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="seccion" aria-labelledby="pasos-titulo">
+      <div class="wrap pasos__grid">
+        <div>
+          <p class="etiqueta mono">Cómo funciona</p>
+          <h2 class="display" id="pasos-titulo">La cata, <em>en tres pasos.</em></h2>
+          <ol class="pasos__lista">
+            <li class="paso">
+              <span class="paso__n" aria-hidden="true">01</span>
+              <div><h3>Prueba en orden.</h3><p>Del 01 al 03: de más ligero a más intenso.</p></div>
+            </li>
+            <li class="paso">
+              <span class="paso__n" aria-hidden="true">02</span>
+              <div><h3>Puntúa sin mirar.</h3><p>Aroma, acidez, dulzor, cuerpo y final, de 1 a 5.</p></div>
+            </li>
+            <li class="paso">
+              <span class="paso__n" aria-hidden="true">03</span>
+              <div><h3>Elige el tuyo.</h3><p>Tu favorito, en 250 g o 1 kg.</p></div>
+            </li>
+          </ol>
+        </div>
+        <figure class="pasos__img">
+          <img src="/assets/img/pack-momentos-abierto-1400.webp" srcset="/assets/img/pack-momentos-abierto-800.webp 800w, /assets/img/pack-momentos-abierto-1400.webp 1400w" sizes="(min-width: 960px) 46vw, 100vw" width="1400" height="933" loading="lazy" alt="El Pack Momentos abierto: tres bolsas de 100 gramos (Chispa, Charla y Sobremesa), la ficha de cata, tres tazas pequeñas y granos de café sobre una mesa de madera.">
+          <figcaption class="mono">Pack Nº 01 Momentos por dentro. Imagen generada con IA.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="seccion packs" aria-labelledby="packs-titulo">
+      <div class="wrap">
+        <div class="packs__cab">
+          <p class="etiqueta mono">La gama</p>
+          <h2 class="display" id="packs-titulo">Tres packs. <em>¿cuál te quedas?</em></h2>
+          <p class="intro">Cada pack cambia una sola cosa (el momento, el proceso o el origen) para que notes la diferencia en la taza.</p>
+        </div>
+
+        <div class="tarjetas">
+          <article class="tarjeta tarjeta--momentos">
+            <div class="tarjeta__top">
+              <p class="mono">Pack de cata · Nº 01</p>
+              <h3>Momentos</h3>
+              <p class="tarjeta__frase">tres momentos del día.</p>
+              <ul class="cafes">
+                <li class="cafe"><p><span class="cafe__nombre">Chispa</span> <span class="cafe__desc">afrutado y vivo.</span></p><p class="cafe__origen mono">Etiopía · Guji · Lavado</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Charla</span> <span class="cafe__desc">dulce y redondo.</span></p><p class="cafe__origen mono">Colombia · Huila · Lavado</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Sobremesa</span> <span class="cafe__desc">chocolate con cuerpo.</span></p><p class="cafe__origen mono">Brasil · Cerrado Mineiro · Natural</p></li>
+              </ul>
+            </div>
+            <p class="tarjeta__pie mono"><span>3 × 100 g · Grano</span><span>+ Ficha</span></p>
+          </article>
+
+          <article class="tarjeta tarjeta--procesos">
+            <div class="tarjeta__top">
+              <p class="mono">Pack de cata · Nº 02</p>
+              <h3>Procesos</h3>
+              <p class="tarjeta__frase">una finca, tres procesos.</p>
+              <ul class="cafes">
+                <li class="cafe"><p><span class="cafe__nombre">Agua</span> <span class="cafe__desc">limpio y brillante.</span></p><p class="cafe__origen mono">Costa Rica · Tarrazú · Lavado</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Miel</span> <span class="cafe__desc">meloso y suave.</span></p><p class="cafe__origen mono">Costa Rica · Tarrazú · Honey</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Sol</span> <span class="cafe__desc">frutal e intenso.</span></p><p class="cafe__origen mono">Costa Rica · Tarrazú · Natural</p></li>
+              </ul>
+            </div>
+            <p class="tarjeta__pie mono"><span>3 × 100 g · Grano</span><span>+ Ficha</span></p>
+          </article>
+
+          <article class="tarjeta tarjeta--origenes">
+            <div class="tarjeta__top">
+              <p class="mono">Pack de cata · Nº 03</p>
+              <h3>Orígenes</h3>
+              <p class="tarjeta__frase">un proceso, tres orígenes.</p>
+              <ul class="cafes">
+                <li class="cafe"><p><span class="cafe__nombre">Sabana</span> <span class="cafe__desc">jugoso y vibrante.</span></p><p class="cafe__origen mono">Kenia · Nyeri · Lavado</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Volcán</span> <span class="cafe__desc">equilibrado y profundo.</span></p><p class="cafe__origen mono">Guatemala · Acatenango · Lavado</p></li>
+                <li class="cafe"><p><span class="cafe__nombre">Isla</span> <span class="cafe__desc">especiado y con cuerpo.</span></p><p class="cafe__origen mono">Indonesia · Java · Lavado</p></li>
+              </ul>
+            </div>
+            <p class="tarjeta__pie mono"><span>3 × 100 g · Grano</span><span>+ Ficha</span></p>
+          </article>
+        </div>
+
+        <div class="packs__cta">
+          <a class="btn" href="#lista">Apuntarme a la lista <span aria-hidden="true">→</span></a>
+          <p class="mono">Elige tu pack en el formulario</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion cierre" aria-labelledby="cierre-titulo">
+      <div class="wrap">
+        <img class="cierre__simbolo" src="/assets/logo/criba-simbolo-negativo.svg" alt="" width="88" height="88" loading="lazy">
+        <h2 class="display" id="cierre-titulo">Tres cafés. <em>tu propio criterio.</em></h2>
+        <p class="intro">La lista de espera ya está abierta. Apúntate y sé de los primeros en catar.</p>
+        <a class="btn btn--papel" href="#lista">Apuntarme <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap">
+      <div class="pie__fila mono"><span>Criba</span><span>@cribacoffee</span></div>
+      <nav class="pie__enlaces mono" aria-label="Enlaces">
+        <a href="https://www.instagram.com/cribacoffee/" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@cribacoffee" rel="noopener">TikTok</a>
+        <a href="/privacidad/">Privacidad</a>
+      </nav>
+      <p class="pie__legal">Criba es un proyecto académico de la asignatura Xarxes Socials de TecnoCampus (Mataró, 2026). Las imágenes de producto están generadas con IA. Esta web no usa cookies.</p>
+    </div>
+  </footer>
+</body>
+</html>

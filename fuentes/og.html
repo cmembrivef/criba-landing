@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+@font-face { font-family: "DM Mono"; src: url("../public/assets/fonts/dm-mono-400.woff2") format("woff2"); font-weight: 400; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { width: 1200px; height: 630px; display: grid; grid-template-columns: 620px 580px; background: #F5D4C8; color: #1B1613; font-family: "Fraunces", serif; }
+.txt { padding: 56px 0 0 64px; display: flex; flex-direction: column; }
+.txt img { height: 58px; width: auto; align-self: flex-start; }
+h1 { margin: 64px 0 0; font-weight: 800; font-variation-settings: "opsz" 144; font-size: 92px; line-height: .92; letter-spacing: -.04em; }
+h1 em { display: block; font-style: italic; font-weight: 500; color: #C7361E; letter-spacing: -.02em; }
+.mono { margin-top: auto; padding: 22px 0 44px; font-family: "DM Mono", monospace; font-size: 18px; letter-spacing: .16em; text-transform: uppercase; }
+.foto { background: url("../public/assets/img/tres-cajas-1400.webp") 15% 50% / cover no-repeat; }
+</style>
+</head>
+<body>
+  <div class="txt">
+    <img src="../public/assets/logo/criba-logotipo-horizontal.svg" alt="">
+    <h1>Sé de los primeros <em>en catar.</em></h1>
+    <p class="mono">Lista de espera · cribacoffee.es</p>
+  </div>
+  <div class="foto"></div>
+</body>
+</html>
