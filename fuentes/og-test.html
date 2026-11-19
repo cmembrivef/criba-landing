@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "Fraunces"; src: url("../public/assets/fonts/fraunces-opsz-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+@font-face { font-family: "DM Mono"; src: url("../public/assets/fonts/dm-mono-400.woff2") format("woff2"); font-weight: 400; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { width: 1200px; height: 630px; display: grid; grid-template-columns: 600px 600px; background: #F5D4C8; color: #1B1613; font-family: "Fraunces", serif; }
+.txt { padding: 56px 0 0 64px; display: flex; flex-direction: column; }
+.txt img { height: 54px; width: auto; align-self: flex-start; }
+h1 { margin: 58px 0 0; font-weight: 800; font-variation-settings: "opsz" 144; font-size: 100px; line-height: .9; letter-spacing: -.04em; }
+h1 em { display: block; font-style: italic; font-weight: 500; color: #C7361E; letter-spacing: -.02em; }
+.mono { margin-top: auto; padding: 22px 0 46px; font-family: "DM Mono", monospace; font-size: 18px; letter-spacing: .16em; text-transform: uppercase; }
+.grid { align-self: center; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 0 64px 0 24px; }
+.grid span { display: flex; align-items: flex-end; height: 112px; padding: 12px; background: #F5EFE4; border: 3px solid #1B1613; border-top-width: 16px; font-weight: 800; font-size: 25px; letter-spacing: -.02em; }
+.grid span:nth-child(3n+1) { border-top-color: #C7361E; }
+.grid span:nth-child(3n+2) { border-top-color: #E2972A; }
+.grid span:nth-child(3n) { border-top-color: #1E5E46; }
+</style>
+</head>
+<body>
+  <div class="txt">
+    <img src="../public/assets/logo/criba-logotipo-horizontal.svg" alt="">
+    <h1>¿Qué Criba <em>eres?</em></h1>
+    <p class="mono">Test · 5 preguntas · 9 cafés</p>
+  </div>
+  <div class="grid">
+    <span>Chispa</span><span>Charla</span><span>Sobremesa</span>
+    <span>Agua</span><span>Miel</span><span>Sol</span>
+    <span>Sabana</span><span>Volcán</span><span>Isla</span>
+  </div>
+</body>
+</html>

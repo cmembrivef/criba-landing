@@ -3,6 +3,15 @@
 #   cribacoffee.es/ig/story-17   → una pieza concreta de Instagram (utm_content=story-17)
 #   cribacoffee.es/tt            → bio de TikTok
 #   cribacoffee.es/tt/video-cata → una pieza concreta de TikTok
+# Test «¿Qué Criba eres?»
+#   cribacoffee.es/test     → el test (sin UTM)
+#   cribacoffee.es/ig/test  → el test desde Instagram (utm_content=test)
+#   cribacoffee.es/t        → enlace que se comparte al terminar el test
+/test        /que-criba-eres/   301
+/t           /que-criba-eres/?utm_source=compartido&utm_medium=referral&utm_campaign=lista-espera&utm_content=resultado-test   302
+/ig/test     /que-criba-eres/?utm_source=instagram&utm_medium=social&utm_campaign=lista-espera&utm_content=test   302
+/tt/test     /que-criba-eres/?utm_source=tiktok&utm_medium=social&utm_campaign=lista-espera&utm_content=test   302
+
 /ig          /?utm_source=instagram&utm_medium=social&utm_campaign=lista-espera&utm_content=bio     302
 /ig/:pieza   /?utm_source=instagram&utm_medium=social&utm_campaign=lista-espera&utm_content=:pieza  302
 /tt          /?utm_source=tiktok&utm_medium=social&utm_campaign=lista-espera&utm_content=bio        302

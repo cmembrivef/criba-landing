@@ -20,7 +20,7 @@ with sync_playwright() as p:
            margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
     # Vista previa de la ficha en PNG (solo para revisar)
     pg.set_viewport_size({"width": 794, "height": 1123})
-    pg.screenshot(path="/tmp/claude-0/-home-claude/75c7ff61-7716-59e4-9ff2-998f820ffd94/scratchpad/ficha-preview.png")
+    pg.screenshot(path=str(raiz / "fuentes/ficha-preview.png"))
     pg.close()
     # Imagen para compartir 1200 x 630
     pg = b.new_page(viewport={"width": 1200, "height": 630})
@@ -28,6 +28,13 @@ with sync_playwright() as p:
     pg.wait_for_load_state("networkidle")
     pg.evaluate("document.fonts.ready")
     pg.screenshot(path=str(pub / "og.jpg"), type="jpeg", quality=86)
+    pg.close()
+    # Imagen para compartir el test
+    pg = b.new_page(viewport={"width": 1200, "height": 630})
+    pg.goto((raiz / "fuentes/og-test.html").as_uri())
+    pg.wait_for_load_state("networkidle")
+    pg.evaluate("document.fonts.ready")
+    pg.screenshot(path=str(pub / "og-test.jpg"), type="jpeg", quality=86)
     pg.close()
     # Iconos
     for size, name, svg, bg in [

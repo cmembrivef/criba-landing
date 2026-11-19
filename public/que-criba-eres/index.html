@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué Criba eres? · Test de café de Criba</title>
+  <meta name="description" content="Cinco preguntas y te decimos cuál de los nueve cafés de especialidad de Criba va contigo, en qué pack está y en qué orden lo catarías.">
+  <meta name="theme-color" content="#F5D4C8">
+  <link rel="canonical" href="https://cribacoffee.es/que-criba-eres/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Criba">
+  <meta property="og:title" content="¿Qué Criba eres?">
+  <meta property="og:description" content="Cinco preguntas, nueve cafés. Descubre cuál va contigo.">
+  <meta property="og:url" content="https://cribacoffee.es/que-criba-eres/">
+  <meta property="og:image" content="https://cribacoffee.es/og-test.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="¿Qué Criba eres? Test de cinco preguntas para encontrar tu café entre los nueve de Criba.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/fraunces-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <script src="/assets/js/consentimiento.js?v=1" defer></script>
+  <script src="/assets/js/main.js?v=4" defer></script>
+  <script src="/assets/js/test.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#test">Ir al test</a>
+
+  <header class="cabecera">
+    <div class="wrap top">
+      <a class="top__logo" href="/"><img src="/assets/logo/criba-logotipo-horizontal.svg" alt="Criba, inicio" width="341" height="104"></a>
+      <nav class="menu" aria-label="Principal">
+        <a class="menu__link" href="/">Inicio</a>
+        <a class="menu__link menu__link--test" href="/que-criba-eres/" aria-current="page">¿Qué Criba eres?</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="test" id="test">
+    <div class="wrap">
+
+      <section class="test__intro" id="intro" aria-labelledby="test-titulo">
+        <div class="test__intro-texto">
+          <p class="kicker mono">Test · 5 preguntas · 1 minuto</p>
+          <h1 class="display" id="test-titulo">¿Qué Criba <em>eres?</em></h1>
+          <p class="lead">Contesta sin pensarlo mucho. Te decimos cuál de nuestros nueve cafés va contigo, en qué pack está y en qué orden lo catarías.</p>
+          <button class="btn" type="button" id="empezar">Empezar el test <span aria-hidden="true">→</span></button>
+          <p class="test__nota mono">Sin registro y en menos de un minuto.</p>
+        </div>
+        <figure class="nueve" aria-hidden="true">
+          <div class="nueve__fila"><span class="nueve__pack mono">Nº 01</span><span class="nueve__c nueve__c--1">Chispa</span><span class="nueve__c nueve__c--2">Charla</span><span class="nueve__c nueve__c--3">Sobremesa</span></div>
+          <div class="nueve__fila"><span class="nueve__pack mono">Nº 02</span><span class="nueve__c nueve__c--1">Agua</span><span class="nueve__c nueve__c--2">Miel</span><span class="nueve__c nueve__c--3">Sol</span></div>
+          <div class="nueve__fila"><span class="nueve__pack mono">Nº 03</span><span class="nueve__c nueve__c--1">Sabana</span><span class="nueve__c nueve__c--2">Volcán</span><span class="nueve__c nueve__c--3">Isla</span></div>
+          <figcaption class="mono">Nueve cafés · uno es el tuyo</figcaption>
+        </figure>
+      </section>
+
+      <section class="test__caja" id="preguntas" hidden aria-labelledby="pregunta">
+        <div class="progreso" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="mono test__meta" id="meta">Pregunta 1 de 5</p>
+        <h2 class="display test__pregunta" id="pregunta" tabindex="-1"></h2>
+        <div class="opciones" id="opciones"></div>
+        <button class="test__enlace mono" type="button" id="atras">← Pregunta anterior</button>
+      </section>
+
+      <section class="test__caja" id="resultado" hidden aria-labelledby="resultado-titulo">
+        <h2 class="mono test__meta" id="resultado-titulo" tabindex="-1">Tu café es</h2>
+        <article class="bolsa" id="bolsa"></article>
+        <p class="test__porque" id="porque"></p>
+        <p class="test__alternativa" id="alternativa" hidden></p>
+        <div class="test__acciones">
+          <a class="btn" id="cta" href="/#lista">Apuntarme con este pack <span aria-hidden="true">→</span></a>
+          <button class="btn btn--linea" type="button" id="compartir">Compartir mi resultado</button>
+        </div>
+        <p class="test__nota mono" id="compartido" role="status"></p>
+        <p class="test__nota mono">Haz captura y súbela a stories mencionando a @cribacoffee</p>
+        <button class="test__enlace mono" type="button" id="repetir">↺ Repetir el test</button>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap">
+      <div class="pie__fila mono"><span>Criba</span><span>@cribacoffee</span></div>
+      <nav class="pie__enlaces mono" aria-label="Enlaces">
+        <a href="https://www.instagram.com/cribacoffee/" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@cribacoffee" rel="noopener">TikTok</a>
+        <a href="/privacidad/">Privacidad</a>
+        <a href="/privacidad/#cookies" data-abrir-cookies>Cookies</a>
+      </nav>
+      <p class="pie__legal">Criba es un proyecto académico de la asignatura Xarxes Socials de TecnoCampus (Mataró, 2026). Solo usamos cookies de analítica si las aceptas.</p>
+    </div>
+  </footer>
+</body>
+</html>

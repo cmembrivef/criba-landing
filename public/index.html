@@ -23,9 +23,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="/assets/fonts/fraunces-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/fraunces-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/styles.css?v=2">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
   <script src="/assets/js/consentimiento.js?v=1" defer></script>
-  <script src="/assets/js/main.js?v=3" defer></script>
+  <script src="/assets/js/main.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip" href="#lista">Ir al formulario</a>
@@ -33,7 +33,10 @@
   <header class="cabecera">
     <div class="wrap top">
       <a class="top__logo" href="/"><img src="/assets/logo/criba-logotipo-horizontal.svg" alt="Criba" width="341" height="104"></a>
-      <p class="top__estado mono">Lista <span class="ancho">de espera </span>abierta</p>
+      <nav class="menu" aria-label="Principal">
+        <a class="menu__link" href="/" aria-current="page">Inicio</a>
+        <a class="menu__link menu__link--test" href="/que-criba-eres/">¿Qué Criba eres?</a>
+      </nav>
     </div>
   </header>
 
@@ -53,6 +56,7 @@
               <input type="hidden" name="utm_campaign" value="">
               <input type="hidden" name="utm_content" value="">
               <input type="hidden" name="referente" value="">
+              <input type="hidden" name="resultado_test" value="">
               <p class="hp" aria-hidden="true"><label>No rellenes este campo <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
               <div class="field">
@@ -68,6 +72,7 @@
                   <label class="chip chip--origenes"><input type="radio" name="pack" value="origenes"><span>Orígenes</span></label>
                   <label class="chip chip--nose"><input type="radio" name="pack" value="aun-no-lo-se"><span>Aún no lo sé</span></label>
                 </div>
+                <p class="chips__nota mono" id="chips-nota" hidden></p>
               </fieldset>
 
               <label class="consent">
@@ -191,6 +196,17 @@
           <a class="btn" href="#lista">Apuntarme a la lista <span aria-hidden="true">→</span></a>
           <p class="mono">Elige tu pack en el formulario</p>
         </div>
+      </div>
+    </section>
+
+    <section class="seccion teaser" aria-labelledby="teaser-titulo">
+      <div class="wrap teaser__grid">
+        <div>
+          <p class="etiqueta mono">Test · 5 preguntas · 1 minuto</p>
+          <h2 class="display" id="teaser-titulo">¿Qué Criba <em>eres?</em></h2>
+          <p class="intro">Si no sabes con qué pack empezar, contesta cinco preguntas y te decimos cuál de los nueve cafés va contigo.</p>
+        </div>
+        <a class="btn" href="/que-criba-eres/">Hacer el test <span aria-hidden="true">→</span></a>
       </div>
     </section>
 

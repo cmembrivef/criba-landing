@@ -37,6 +37,23 @@
     form.elements.referente.value = store.get("criba_referente") || referente || "";
   }
 
+  // Resultado del test «¿Qué Criba eres?» (lo guarda test.js en esta sesión del navegador)
+  var resultado = store.get("criba_test") || "";
+  if (form.elements.resultado_test) form.elements.resultado_test.value = resultado;
+
+  // Desde el test se llega con ?pack=… : se deja marcado ese pack (se puede cambiar)
+  var NOMBRES = { momentos: "Momentos", procesos: "Procesos", origenes: "Orígenes" };
+  var packUrl = params.get("pack");
+  if (packUrl && Object.prototype.hasOwnProperty.call(NOMBRES, packUrl)) {
+    var radio = form.querySelector("input[name='pack'][value='" + packUrl + "']");
+    if (radio) radio.checked = true;
+    var nota = document.getElementById("chips-nota");
+    if (nota) {
+      nota.textContent = "Marcado por tu resultado del test: " + NOMBRES[packUrl] + ". Puedes cambiarlo.";
+      nota.hidden = false;
+    }
+  }
+
   var box = form.closest(".registro");
   var ok = box ? box.querySelector(".ok") : null;
   var err = form.querySelector(".form__error");
@@ -69,7 +86,7 @@
       // Conversión para Google Analytics (solo se envía si la persona aceptó las cookies)
       if (typeof window.cribaEvento === "function") {
         var pack = form.querySelector("input[name='pack']:checked");
-        window.cribaEvento("generate_lead", { pack: pack ? pack.value : "sin-elegir" });
+        window.cribaEvento("generate_lead", { pack: pack ? pack.value : "sin-elegir", resultado_test: resultado || "sin-test" });
       }
     }).catch(function () {
       if (err) err.hidden = false;
