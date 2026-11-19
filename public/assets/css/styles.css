@@ -503,3 +503,27 @@ body.con-aviso { padding-bottom: 180px; }
 .test__alternativa { margin-top: 12px; max-width: 42ch; color: var(--gris); font-size: 1rem; font-style: italic; line-height: 1.45; }
 .test__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .test__acciones .btn { flex: 1 1 260px; }
+
+/* ——— La criba del test: los que pasan caen, los que se quedan se quedan ——— */
+.test__pista { margin: -14px 0 24px; max-width: 46ch; color: var(--gris); font-style: italic; font-size: 1rem; line-height: 1.45; }
+.nueve--criba { margin: 4px 0 26px; }
+.nueve--final { margin-bottom: 8px; }
+.nueve--criba .nueve__c {
+  transition: transform 0.6s cubic-bezier(0.5, 0, 0.75, 0), opacity 0.6s ease, box-shadow 0.3s ease;
+}
+.nueve--criba .nueve__fila:nth-child(2) .nueve__c { transition-delay: 0.08s; }
+.nueve--criba .nueve__fila:nth-child(3) .nueve__c { transition-delay: 0.16s; }
+.nueve__c.pasa { transform: translateY(12px) scale(0.94); opacity: 0.16; }
+.nueve__c.casi { opacity: 0.5; border-style: dashed; transform: translateY(6px); }
+.nueve__c.elegido { transform: translate(-3px, -3px); box-shadow: 5px 5px 0 var(--tinta); }
+.nueve__c.sin-anim { transition: none; }
+.nueve--final .nueve__c { min-height: 52px; }
+@media (prefers-reduced-motion: reduce) { .nueve--criba .nueve__c { transition: none; } }
+.test__lo { font-size: clamp(2.5rem, 10vw, 3.8rem); margin: 22px 0 18px; }
+.test__lo em, .test__pregunta em { color: var(--cereza); }
+.test__lo:focus { outline: none; }
+.test__criterio { margin-top: 26px; padding: 20px 22px; background: var(--papel); border-left: 6px solid var(--cereza); max-width: 46ch; }
+.test__criterio-tit { font-weight: 800; font-variation-settings: "opsz" 96; font-size: 1.5rem; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; }
+.test__criterio-tit em { font-weight: 500; color: var(--cereza); }
+.test__criterio p:not(.test__criterio-tit) { font-size: 1.05rem; line-height: 1.5; }
+.nueve__c.casi { border-top-style: solid; }

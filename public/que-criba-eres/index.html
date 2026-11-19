@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>¿Qué Criba eres? · Test de café de Criba</title>
-  <meta name="description" content="Cinco preguntas y te decimos cuál de los nueve cafés de especialidad de Criba va contigo, en qué pack está y en qué orden lo catarías.">
+  <meta name="description" content="Nueve cafés de especialidad entran en la criba y uno se queda. Cinco preguntas para encontrar el tuyo.">
   <meta name="theme-color" content="#F5D4C8">
   <link rel="canonical" href="https://cribacoffee.es/que-criba-eres/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Criba">
   <meta property="og:title" content="¿Qué Criba eres?">
-  <meta property="og:description" content="Cinco preguntas, nueve cafés. Descubre cuál va contigo.">
+  <meta property="og:description" content="Nueve cafés entran en la criba. Uno se queda. ¿Cuál es el tuyo?">
   <meta property="og:url" content="https://cribacoffee.es/que-criba-eres/">
   <meta property="og:image" content="https://cribacoffee.es/og-test.jpg">
   <meta property="og:image:width" content="1200">
@@ -23,10 +23,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="/assets/fonts/fraunces-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/fraunces-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=4">
   <script src="/assets/js/consentimiento.js?v=1" defer></script>
   <script src="/assets/js/main.js?v=4" defer></script>
-  <script src="/assets/js/test.js?v=1" defer></script>
+  <script src="/assets/js/test.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip" href="#test">Ir al test</a>
@@ -48,15 +48,15 @@
         <div class="test__intro-texto">
           <p class="kicker mono">Test · 5 preguntas · 1 minuto</p>
           <h1 class="display" id="test-titulo">¿Qué Criba <em>eres?</em></h1>
-          <p class="lead">Contesta sin pensarlo mucho. Te decimos cuál de nuestros nueve cafés va contigo, en qué pack está y en qué orden lo catarías.</p>
-          <button class="btn" type="button" id="empezar">Empezar el test <span aria-hidden="true">→</span></button>
+          <p class="lead">Una criba es el tamiz que separa los granos: unos pasan y otros se quedan. Este test hace lo mismo con nuestros nueve cafés. Contesta sin pensarlo mucho y mira cuál se queda contigo.</p>
+          <button class="btn" type="button" id="empezar">Empezar la criba <span aria-hidden="true">→</span></button>
           <p class="test__nota mono">Sin registro y en menos de un minuto.</p>
         </div>
         <figure class="nueve" aria-hidden="true">
           <div class="nueve__fila"><span class="nueve__pack mono">Nº 01</span><span class="nueve__c nueve__c--1">Chispa</span><span class="nueve__c nueve__c--2">Charla</span><span class="nueve__c nueve__c--3">Sobremesa</span></div>
           <div class="nueve__fila"><span class="nueve__pack mono">Nº 02</span><span class="nueve__c nueve__c--1">Agua</span><span class="nueve__c nueve__c--2">Miel</span><span class="nueve__c nueve__c--3">Sol</span></div>
           <div class="nueve__fila"><span class="nueve__pack mono">Nº 03</span><span class="nueve__c nueve__c--1">Sabana</span><span class="nueve__c nueve__c--2">Volcán</span><span class="nueve__c nueve__c--3">Isla</span></div>
-          <figcaption class="mono">Nueve cafés · uno es el tuyo</figcaption>
+          <figcaption class="mono">Nueve cafés entran · uno se queda</figcaption>
         </figure>
       </section>
 
@@ -64,21 +64,39 @@
         <div class="progreso" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         <p class="mono test__meta" id="meta">Pregunta 1 de 5</p>
         <h2 class="display test__pregunta" id="pregunta" tabindex="-1"></h2>
+        <p class="test__pista" id="pista"></p>
         <div class="opciones" id="opciones"></div>
         <button class="test__enlace mono" type="button" id="atras">← Pregunta anterior</button>
       </section>
 
+      <section class="test__caja" id="criba" hidden aria-labelledby="criba-titulo">
+        <p class="mono test__meta">Primera criba · Acidez, dulzor y cuerpo</p>
+        <h2 class="display test__pregunta" id="criba-titulo" tabindex="-1">Quedan <em>tres.</em></h2>
+        <div class="nueve nueve--criba" id="criba-nueve" aria-hidden="true"></div>
+        <p class="test__porque" id="criba-texto"></p>
+        <div class="test__acciones">
+          <button class="btn" type="button" id="seguir">Segunda criba <span aria-hidden="true">→</span></button>
+        </div>
+        <button class="test__enlace mono" type="button" id="criba-atras">← Cambiar mis respuestas</button>
+      </section>
+
       <section class="test__caja" id="resultado" hidden aria-labelledby="resultado-titulo">
-        <h2 class="mono test__meta" id="resultado-titulo" tabindex="-1">Tu café es</h2>
+        <p class="mono test__meta">Segunda criba · Lo que te mueve</p>
+        <div class="nueve nueve--criba nueve--final" id="final-nueve" aria-hidden="true"></div>
+        <h2 class="display test__lo" id="resultado-titulo" tabindex="-1">Lo que <em>se queda.</em></h2>
         <article class="bolsa" id="bolsa"></article>
         <p class="test__porque" id="porque"></p>
         <p class="test__alternativa" id="alternativa" hidden></p>
+        <div class="test__criterio">
+          <p class="test__criterio-tit">Ahora, <em>decide tu taza.</em></p>
+          <p id="criterio"></p>
+        </div>
         <div class="test__acciones">
           <a class="btn" id="cta" href="/#lista">Apuntarme con este pack <span aria-hidden="true">→</span></a>
-          <button class="btn btn--linea" type="button" id="compartir">Compartir mi resultado</button>
+          <button class="btn btn--linea" type="button" id="compartir">Pasarle el test a alguien</button>
         </div>
         <p class="test__nota mono" id="compartido" role="status"></p>
-        <p class="test__nota mono">Haz captura y súbela a stories mencionando a @cribacoffee</p>
+        <p class="test__nota mono">La cata es para cuatro: comparad lo que se os queda a cada uno. Y si haces captura, menciónanos en stories: @cribacoffee</p>
         <button class="test__enlace mono" type="button" id="repetir">↺ Repetir el test</button>
       </section>
 
