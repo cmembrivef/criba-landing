@@ -26,6 +26,18 @@
   } catch (e) { /* referrer ilegible */ }
   if (referente && !store.get("criba_referente")) store.set("criba_referente", referente);
 
+  // Descargas de la ficha de cata → evento «descarga_ficha» en Google Analytics
+  // (solo se envía si la persona aceptó las cookies; ver consentimiento.js)
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest ? ev.target.closest("a[href*='ficha-de-cata']") : null;
+    if (!a || typeof window.cribaEvento !== "function") return;
+    window.cribaEvento("descarga_ficha", {
+      ubicacion: window.location.pathname.indexOf("/gracias") === 0 ? "pagina_gracias" : "tras_apuntarse",
+      file_name: "ficha-de-cata-criba.pdf",
+      resultado_test: store.get("criba_test") || "sin-test"
+    });
+  });
+
   var form = document.getElementById("form-lista");
   if (!form) return;
 

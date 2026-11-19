@@ -20,7 +20,7 @@ Se borran el 31/12/2026, como dice el aviso de privacidad.
 
 ## Google Analytics
 Propiedad GA4 `G-BY35E4YVML`. Solo se carga si se acepta el aviso de cookies (`public/assets/js/consentimiento.js`).
-Al apuntarse se envía el evento `generate_lead` con el pack elegido y el resultado del test. El test envía `quiz_start`, `quiz_complete` y `share`.
+Al apuntarse se envía el evento `generate_lead` con el pack elegido y el resultado del test. El test envía `quiz_start`, `quiz_complete` y `share`. Al pulsar «Descargar la ficha» se envía `descarga_ficha` (con `ubicacion` y `resultado_test`).
 
 ## Identidad
 Colores, tipografía y reglas del Manual de marca de Criba (Grupo 1, 2026). Imágenes de producto generadas con IA.
